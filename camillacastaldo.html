@@ -1,0 +1,186 @@
+<html>
+	<head>
+<!-- This will become the ulr title-->
+
+		<title> Camilla Castaldo </title>
+
+<!-- This is how I was able to keep my image to the right, define the margin dimensions and place a black border with padding of 2 pixels  -->
+<style>
+	.float-img{
+		float:right;
+		margin-left: 10px; 
+		margin-bottom: 5px; 
+		border: solid black 1px; 
+		padding 2px;
+}
+</style>
+
+<!--script contains all the functions used throughout the html page  -->
+<script>
+
+<!-- function that was able to change the 'subscribe' button to a different phrase -->
+function changeText()
+		{
+		document.getElementById('demo').innerHTML= 'Subscribe Here';
+		
+		document.getElementById('demo').innerHTML = "Subscribed!";
+		}
+
+<!-- function that carried out the checkbox for the input information and allowed for popup windows using if statements -->
+function verify()
+{
+			var value = document.getElementById('EmaNam').checked;
+	
+			if(value == true)
+			{
+				alert('Your information has been submitted.');
+			}
+			else
+			{
+				alert('Error:Input your name and email');
+			}		
+}
+
+</script>
+	</head>
+	<body>
+<!--changing font of title and defining colour. h1 refers to heading one so this title will be displayed as a main heading  -->
+<font face="Georgia"><font color="pink"><h1> Camilla Castaldo </br> </br> ESSE 4600 </h1></font></font>
+
+<!--changing font of title and defining colour. h2 refers to heading two so this title will be displayed as a second heading to the first  -->
+		<font face="Georgia"><font color="maroon"><h2>About </h2></font>
+
+<!-- uploading the wanted image and defining the dimensions. float means that the image is placed to the right or left allowing text to wrap around it  -->
+<img src="camilla_c_pic.jpg" width="300"; height="300"
+	class="float-img"/>
+
+<!--<p></p> is how a paragraph is defined, the next line will automatically skip a line to start next text. </br> defines breaks so that a full space is placed between text.-->
+
+<p>I am Camilla Castaldo, a Geomatics Engineering Student from York University. I grew up in Toronto however, I am Argentinian and Italian. I have two brothers, a older one and a younger one. I also have a golden retriever.</p>
+
+
+
+<!-- another heading with h2 tag to define its size -->
+<font face="Georgia"><font color="maroon"><h2>Courses </h2></font></font>
+
+
+<!-- this is how i was able to alternate the colours of the rows on the following table. It began by defining the background colour of the rows -->
+<style type="text/css">
+tr.d0 td {
+	background-color: #D8D7D7; color: black;
+}
+tr.d1 td {
+	background-color: White; color: black;
+}
+</style>
+<!-- this is how i created the table. border=1 is how i was able to have a border show for the whole table. the tags <th></th>,<thead></thead> define table headings. the tags <tbody></tbody>, <tr></tr> is how text is placed in each cell. <a href="#"> is how to highlight text blue with an underline as if it is a link but it is not linked to anything. colspan is what i used to centre the specific title. class ="d0" and class ="d1" was applied to the rows that i wanted a specific background colour (based on above). font color="green"> was used to show the current classes being taken by changing the colour of the text to green.-->
+		<table border="1">
+
+			<thead> 
+				<tr> 
+					<th>Course Number</th>
+					<th>Course Title</th>
+					<th>Semester Taken</th>
+				</tr>	
+			</thead>
+			<thead> 
+				<tr>
+					
+					<th colspan= "3">For Credit</th>
+					
+
+				</tr>	
+			</thead>
+			<tbody>
+			<tr class ="d0">
+
+				<td>
+ 				<a href="#">4600</td>
+				<td><font color="green">GIS 2</font></td>
+				<td><font color="green">Winter 2019</font></td>
+			</tr>
+			<tr class ="d1">
+				<td><a href="#">3670</td>
+				<td><font color="green">GNSS</font></td>
+				<td><font color="green">Winter 2019</font></td>
+			</tr>
+			<tr class ="d0">
+				<td><a href="#">3020</td>
+				<td><font color="green">Geophysics</font></td>
+				<td><font color="green">Winter 2019</font></td>
+			</tr>
+			<tr class ="d1">
+				<td><a href="#">3600</td>
+				<td>Gis</td>
+				<td>Fall 2018</td>
+			</tr>
+			<tr class ="d0">
+				<td><a href="#">4220</td>
+				<td>Remote Sensing</td>
+				<td>Fall 2018</td>
+			</tr>
+			<tr class ="d1">
+				<td><a href="#">4020</td>
+				<td>Time Series</td>
+				<td>Fall 2018</td>
+			</tr>
+			</tbody>
+			<thead> 
+				<tr>
+					<th colspan="3">For Elective</th>
+
+				</tr>	
+			</thead>
+			<tbody>
+			<tr class ="d0">
+				<td><a href="#">3500</td>
+				<td><font color="green">STS</font></td>
+				<td><font color="green">Winter 2019</font></td>
+			</tr>
+			<tr class ="d1">
+				<td><a href="#">2110</td>
+				<td>STS</td>
+				<td>Fall 2018</td>
+			</tr>
+			</tbody>
+		</table>
+
+<!-- another heading with h2 tag to define its size -->
+<font face="Georgia"><font color="maroon"><h2>Intrests </h2></font></font>
+<p> My interests include the following: </br>
+</br>
+-Ballet </br>
+-Boxing </br>
+-Watching movies </br>
+-Travelling </br>
+-Trying new restaurants </br>
+-Hanging out with friends and family </p>
+
+<!--a new heading with h3 size -->
+<font face="Georgia"><font color="maroon"><h3>Subscribe to Newsletter </h3></font></font>
+Want to be updated when new content is released? Click to subscribe below!</br>
+
+<!--creating text boxes so on the html page, text can  be written within box -->
+Name<input type="text" id="TextBoxN"/></br> 
+
+Email<input type="text" id="TextBoxE"/></br> 
+	
+<!--using change text function and defining click me button -->
+<p id="demo">Subscribe Here
+	<button type="button" onclick="changeText()">Click Me!</button></p>
+		
+<!--defining checkbox and using verify functions -->
+<p><input type="checkbox" id="EmaNam"/>Did you input the correct information?
+<button type="button" onclick="verify()">Verify</button></p>
+</br>
+
+<!--this is how i was able to link a page to my html -->			
+<a href="https://www.instagram.com/?hl=en"> Visit my Instagram page </a>
+
+	</body>	
+
+</html>	
+
+
+
+
