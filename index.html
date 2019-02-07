@@ -29,11 +29,11 @@ function changeText()
 <!-- function that carried out the checkbox for the input information and allowed for popup windows using if statements -->
 function verify()
 {
-			var value = document.getElementById('EmaNam').checked;
-	
-			if(value == true)
+			var name = document.getElementById('TextBoxN').value;
+			var email = document.getElementById('TextBoxE').value;
+			if((name) && (email))
 			{
-				alert('Your information has been submitted.');
+				alert("Your information has been submitted. "+" "+name+"     	"+email);
 			}
 			else
 			{
@@ -170,7 +170,7 @@ Email<input type="text" id="TextBoxE"/></br>
 	<button type="button" onclick="changeText()">Click Me!</button></p>
 		
 <!--defining checkbox and using verify functions -->
-<p><input type="checkbox" id="EmaNam"/>Did you input the correct information?
+
 <button type="button" onclick="verify()">Verify</button></p>
 </br>
 
